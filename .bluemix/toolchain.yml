@@ -1,4 +1,7 @@
-version: '2'
+#
+# Copyright IBM Corp. 2020
+#
+version: '1'
 messages:
   $i18n: locales.yml
 template:
@@ -22,14 +25,14 @@ template:
 toolchain:
   name: >
     $env.toolchainName ? '{{toolchainName}}' :
-      'helm-toolchain-{{timestamp}}'
+      '<NAME>-{{timestamp}}'
   template:
     getting_started:
      $ref: "#/messages/template.gettingStarted"
 services:
   repo:
     service_id: >
-      $env.source_provider ? $env.source_provider : 'hostedgit'
+      $env.source_provider ? $env.source_provider : 'github_integrated'
     parameters:
       repo_name: >
         $env.toolchainName ? '{{toolchainName}}' :
@@ -42,7 +45,7 @@ services:
         $env.type === 'fork' || $env.type === 'clone' ? $env.app_repo :
           $env.sourceZipUrl ? '{{sourceZipUrl}}' : 
             'https://github.com/open-toolchain/hello-helm'
-      type: $env.type || 'clone'
+      type: $env.type || 'Existing'
       has_issues: true
       enable_traceability: true
   build:
