@@ -25,7 +25,7 @@ template:
 toolchain:
   name: >
     $env.toolchainName ? '{{toolchainName}}' :
-      '<NAME>-{{timestamp}}'
+      'ENTER-TOOLCHAIN-NAME-HERE'
   template:
     getting_started:
      $ref: "#/messages/template.gettingStarted"
