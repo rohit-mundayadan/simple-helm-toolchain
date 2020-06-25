@@ -69,6 +69,7 @@ services:
           SLACK_WEB_HOOK: '{{form.pipeline.parameters.slack-web-hook}}'
           GIT_TOKEN: '{{form.pipeline.parameters.git-token}}'
           SNYK_TOKEN: '{{form.pipeline.parameters.snyk-token}}'
+          HELM_VALUES_FILE: '{{form.pipeline.parameters.helm-values-file}}'
         execute: true
 # Learn about form object:
 #  https://github.com/open-toolchain/sdk/wiki/Template-Custom-UI#form
@@ -92,3 +93,4 @@ form:
       slack-web-hook: '{{slackWebHook}}'
       git-token: '{{gitToken}}'
       snyk-token: '{{snykToken}}'
+      helm-values-file : '{{helmValuesFile}}'

@@ -111,6 +111,9 @@ stages:
   - name: APP_URL
     value: ''
     type: text
+  - name: HELM_VALUES_FILE
+    value: ${HELM_VALUES_FILE}
+    type: text
   jobs:
   - name: K8_HELM_DEPLOY
     type: deployer

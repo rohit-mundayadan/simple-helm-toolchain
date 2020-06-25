@@ -118,6 +118,11 @@
             },
             "type": "string",
             "pattern": "\\S"
+        },
+        "helm-values-file" : {
+            "description": "Helm values file relative path from root of the repo. If left empty, the default values.yaml will be used",
+            "type": "string",
+            "pattern": "\\S"
         }
     },
     "required": [
@@ -329,6 +334,12 @@
             "readonly": false,
             "title": "SLACK_WEB_HOOK",
             "key": "slack-web-hook"
+        },
+        {
+            "type": "text",
+            "readonly": false,
+            "title": "Helm Values File",
+            "key": "helm-values-file"
         }
     ]
 }
