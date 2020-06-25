@@ -27,11 +27,7 @@
         "github-token": {
             "description": "Github access token for pulling down private submodules and pipeline scripts",
             "type": "string",
-            "pattern": "\\S",
-            "validator": {
-                "v-type": "api-key",
-                "validate": true
-            }
+            "pattern": "\\S"
         },
         "snyk-token": {
             "description": "API Token for snyk OSS scanning",
