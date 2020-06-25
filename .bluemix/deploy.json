@@ -313,19 +313,19 @@
             ]
         },
         {
-            "type": "secret",
+            "type": "secure",
             "readonly": false,
             "title": "GIT_TOKEN",
             "key": "github-token"
         },
         {
-            "type": "secret",
+            "type": "secure",
             "readonly": false,
             "title": "SNYK_TOKEN",
             "key": "snyk-token"
         },
         {
-            "type": "secret",
+            "type": "secure",
             "readonly": false,
             "title": "SLACK_WEB_HOOK",
             "key": "slack-web-hook"
