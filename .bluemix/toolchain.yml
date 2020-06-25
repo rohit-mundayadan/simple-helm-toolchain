@@ -36,16 +36,16 @@ toolchain:
 #
 services:
   # We use the github whitewalker tool ( https://github.com/open-toolchain/sdk/wiki/services.md#github_integrated )
-  IBM-GHE:
+  repo:
     service_id: 'github_integrated'
     parameters:
-      repo_name: '<SELECT_EXISTING_TYPE>'
+      repo_name: 'git_repo_name'
       repo_url: 'https://github.ibm.com/<ORG>/<REPO>'
       type: 'Existing'
       private_repo: true
       has_issues: false
       enable_traceability: true
-  build:
+  DeliveryPipeline-Svc:
     service_id: pipeline
     parameters:
       services:
