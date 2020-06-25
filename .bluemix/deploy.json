@@ -29,10 +29,7 @@
             "type": "string",
             "pattern": "\\S",
             "validator": {
-                "v-type": "k8s-registry-namespace",
-                "params": [
-                    "registry-region"
-                ],
+                "v-type": "api-key",
                 "validate": false
             }
         },
