@@ -5,7 +5,7 @@
 # This is a toolchain template used for seeting up CI/CD process for applications 
 
 # Note: To understand the structure of this file read https://github.com/open-toolchain/sdk/wiki/Template-File-Format
-version: '1'
+version: '2'
 messages:
   $i18n: locales.yml
 template:
