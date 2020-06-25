@@ -27,26 +27,17 @@
         "github-token": {
             "description": "Github access token for pulling down private submodules and pipeline scripts",
             "type": "string",
-            "pattern": "\\S",
-            "validator": {
-                "v-type": "api-key"
-            }
+            "pattern": "\\S"
         },
         "snyk-token": {
             "description": "API Token for snyk OSS scanning",
             "type": "string",
-            "pattern": "\\S",
-            "validator": {
-                "v-type": "api-key"
-            }
+            "pattern": "\\S"
         },
         "slack-web-hook": {
             "description": "Slack Web Hook URL",
             "type": "string",
-            "pattern": "\\S",
-            "validator": {
-                "v-type": "api-key"
-            }
+            "pattern": "\\S"
         },
         "registry-region": {
             "description": {
