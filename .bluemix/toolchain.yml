@@ -39,6 +39,7 @@ services:
   IBM-GHE:
     service_id: 'github_integrated'
     parameters:
+      repo_name: '<SELECT_EXISTING_TYPE>'
       repo_url: 'https://github.ibm.com/<ORG>/<REPO>'
       type: 'Existing'
       private_repo: true
