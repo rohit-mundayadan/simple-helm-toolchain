@@ -2,7 +2,7 @@
 # Copyright IBM Corp. 2020
 #
 
-# This is a toolchain template used for seeting up CI/CD process for applications 
+# This is a toolchain template used for setting up CI/CD process for applications 
 
 # Note: To understand the structure of this file read https://github.com/open-toolchain/sdk/wiki/Template-File-Format
 version: '2'
@@ -39,12 +39,13 @@ services:
   repo:
     service_id: 'github_integrated'
     parameters:
-      repo_name: '<ENTER_APP_NAME>'
+      repo_name: ''
       repo_url: 'https://github.ibm.com/<ORG>/<REPO>'
       type: 'Existing'
-      private_repo: true
+      private_repo: false
       has_issues: false
       enable_traceability: true
+  # Using the delivery pipeline for executing scripts
   build:
     service_id: pipeline
     parameters:
@@ -65,6 +66,9 @@ services:
           PROD_RESOURCE_GROUP: '{{form.pipeline.parameters.prod-resource-group}}'
           PROD_CLUSTER_NAME: '{{form.pipeline.parameters.prod-cluster-name}}'
           PROD_CLUSTER_NAMESPACE: '{{form.pipeline.parameters.prod-cluster-namespace}}'
+          SLACK_WEB_HOOK: '{{form.pipeline.parameters.slack-web-hook}}'
+          GIT_TOKEN: '{{form.pipeline.parameters.git-token}}'
+          SNYK_TOKEN: '{{form.pipeline.parameters.snyk-token}}'
         execute: true
 # Learn about form object:
 #  https://github.com/open-toolchain/sdk/wiki/Template-Custom-UI#form
@@ -78,11 +82,15 @@ form:
           '{{appName}}' : '{{services.repo.parameters.repo_name}}'
       prod-cluster-namespace: >
         $env.prodClusterNamespace ?
-          '{{prodClusterNamespace}}' : 'dev'
+          '{{prodClusterNamespace}}' : 'development'
       registry-region: '{{registryRegion}}'
       registry-namespace: '{{registryNamespace}}'
       api-key: '{{apiKey}}'
       prod-region: '{{prodRegion}}'
       prod-resource-group: '{{prodResourceGroup}}'
       prod-cluster-name: '{{prodClusterName}}'
+      slack-web-hook: '{{slackWebHook}}'
+      git-token: '{{gitToken}}'
+      snyk-token: '{{snykToken}}'
+
 
