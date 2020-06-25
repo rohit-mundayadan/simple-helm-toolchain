@@ -25,9 +25,7 @@
             }
         },
         "github-token": {
-            "description": {
-                "$ref": "Github access token for pulling down private submodules and pipeline scripts"
-            },
+            "description": "Github access token for pulling down private submodules and pipeline scripts",
             "type": "string",
             "pattern": "\\S",
             "validator": {
@@ -35,9 +33,7 @@
             }
         },
         "snyk-token": {
-            "description": {
-                "$ref": "API Token for snyk OSS scanning"
-            },
+            "description": "API Token for snyk OSS scanning",
             "type": "string",
             "pattern": "\\S",
             "validator": {
@@ -45,9 +41,7 @@
             }
         },
         "slack-web-hook": {
-            "description": {
-                "$ref": "Slack Web Hook URL"
-            },
+            "description": "Slack Web Hook URL",
             "type": "string",
             "pattern": "\\S",
             "validator": {
