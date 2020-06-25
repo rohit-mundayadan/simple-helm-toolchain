@@ -30,7 +30,7 @@
             "pattern": "\\S",
             "validator": {
                 "v-type": "api-key",
-                "validate": false
+                "validate": true
             }
         },
         "snyk-token": {
