@@ -39,7 +39,7 @@ services:
   repo:
     service_id: 'github_integrated'
     parameters:
-      repo_name: 'git_repo_name'
+      repo_name: '<ENTER_APP_NAME>'
       repo_url: 'https://github.ibm.com/<ORG>/<REPO>'
       type: 'Existing'
       private_repo: true
