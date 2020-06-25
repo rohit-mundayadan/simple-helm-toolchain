@@ -28,19 +28,19 @@
             "description": "Github access token for pulling down private submodules and pipeline scripts",
             "type": "string",
             "pattern": "\\S",
-            "validator": {}
+            "validator": {"v-type": "secret"}
         },
         "snyk-token": {
             "description": "API Token for snyk OSS scanning",
             "type": "string",
             "pattern": "\\S",
-            "validator": {}
+            "validator": {"v-type": "secret"}
         },
         "slack-web-hook": {
             "description": "Slack Web Hook URL",
             "type": "string",
             "pattern": "\\S",
-            "validator": {}
+            "validator": {"v-type": "secret"}
         },
         "registry-region": {
             "description": {
