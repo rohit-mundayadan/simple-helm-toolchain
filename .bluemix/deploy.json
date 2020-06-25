@@ -157,19 +157,19 @@
         {
             "type": "password",
             "readonly": false,
-            "title": "IBM GHE Access Token",
+            "title": "GIT_TOKEN",
             "key": "github-token"
         },
         {
             "type": "password",
             "readonly": false,
-            "title": "snyk.io API key",
+            "title": "SNYK_TOKEN",
             "key": "snyk-token"
         },
         {
             "type": "password",
             "readonly": false,
-            "title": "Slack WebHook url",
+            "title": "SLACK_WEB_HOOK",
             "key": "slack-web-hook"
         },
         {
