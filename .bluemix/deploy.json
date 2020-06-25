@@ -155,24 +155,6 @@
             "key": "api-key"
         },
         {
-            "type": "password",
-            "readonly": false,
-            "title": "GIT_TOKEN",
-            "key": "github-token"
-        },
-        {
-            "type": "password",
-            "readonly": false,
-            "title": "SNYK_TOKEN",
-            "key": "snyk-token"
-        },
-        {
-            "type": "password",
-            "readonly": false,
-            "title": "SLACK_WEB_HOOK",
-            "key": "slack-web-hook"
-        },
-        {
             "type": "table",
             "columnCount": 3,
             "widths": [
@@ -329,6 +311,24 @@
                     }
                 }
             ]
+        },
+        {
+            "type": "password",
+            "readonly": false,
+            "title": "GIT_TOKEN",
+            "key": "github-token"
+        },
+        {
+            "type": "password",
+            "readonly": false,
+            "title": "SNYK_TOKEN",
+            "key": "snyk-token"
+        },
+        {
+            "type": "password",
+            "readonly": false,
+            "title": "SLACK_WEB_HOOK",
+            "key": "slack-web-hook"
         }
     ]
 }

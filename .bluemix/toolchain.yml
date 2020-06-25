@@ -41,7 +41,7 @@ services:
     parameters:
       repo_name: ''
       repo_url: 'https://github.ibm.com/<ORG>/<REPO>'
-      type: 'Existing'
+      type: 'link'
       private_repo: false
       has_issues: false
       enable_traceability: true
@@ -92,5 +92,3 @@ form:
       slack-web-hook: '{{slackWebHook}}'
       git-token: '{{gitToken}}'
       snyk-token: '{{snykToken}}'
-
-
