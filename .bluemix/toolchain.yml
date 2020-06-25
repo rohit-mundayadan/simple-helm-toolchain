@@ -45,7 +45,7 @@ services:
       private_repo: true
       has_issues: false
       enable_traceability: true
-  DeliveryPipeline-Svc:
+  build:
     service_id: pipeline
     parameters:
       services:
