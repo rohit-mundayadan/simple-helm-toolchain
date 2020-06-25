@@ -26,17 +26,17 @@
         },
         "github-token": {
             "description": "Github access token for pulling down private submodules and pipeline scripts",
-            "type": "string",
+            "type": "password",
             "pattern": "\\S"
         },
         "snyk-token": {
             "description": "API Token for snyk OSS scanning",
-            "type": "string",
+            "type": "password",
             "pattern": "\\S"
         },
         "slack-web-hook": {
             "description": "Slack Web Hook URL",
-            "type": "string",
+            "type": "password",
             "pattern": "\\S"
         },
         "registry-region": {
