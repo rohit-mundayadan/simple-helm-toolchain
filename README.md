@@ -14,7 +14,7 @@ This template assumes an application (e.g. [hello-helm](https://github.com/open-
 - `/Dockerfile` [configurable] -- the docker file used to build the container image in root folder (can be configured in pipeline BUILD stage properties)
 - `/chart /your-app-name`  [configurable] -- the Helm Chart used to deploy this application. The CI pipeline automatically binding it with build information (e.g. image tag) leveraging Helm ability to parameterize deployment actions. (can be configured in pipeline PROD deploy stage properties)
 
-It implements the following best practices:
+This template implements the following good practices:
 - build container image on every Git commit,
 - use a private image registry to store the built image, automatically configure access permissions for target cluster deployment using API tokens than can be revoked,
 - check container image for security vulnerabilities,

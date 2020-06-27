@@ -5,7 +5,7 @@
 # This is a toolchain template used for setting up CI/CD process for applications 
 
 # Note: To understand the structure of this file read https://github.com/open-toolchain/sdk/wiki/Template-File-Format
-version: '2'
+version: '2' # This has to be 2.
 messages:
   $i18n: locales.yml
 template:
@@ -18,6 +18,7 @@ template:
   required:
     - build
     - repo
+    - slack
   info:
     git url: >
       "[" + $env.repository + "]" +
@@ -35,7 +36,7 @@ toolchain:
      $ref: "#/messages/template.gettingStarted"
 #
 services:
-  # We use the github whitewalker tool ( https://github.com/open-toolchain/sdk/wiki/services.md#github_integrated )
+# We use the github whitewalker tool ( https://github.com/open-toolchain/sdk/wiki/services.md#github_integrated )
   repo:
     service_id: 'github_integrated'
     parameters:
@@ -45,6 +46,7 @@ services:
       private_repo: false
       has_issues: false
       enable_traceability: true
+
   # Using the delivery pipeline for executing scripts
   build:
     service_id: pipeline
@@ -71,7 +73,14 @@ services:
           SNYK_TOKEN: '{{form.pipeline.parameters.snyk-token}}'
           HELM_VALUES_FILE: '{{form.pipeline.parameters.helm-values-file}}'
         execute: true
-# Learn about form object:
+slack:
+  serice_id: slack
+  parameters:
+    api_token: '{{form.pipeline.parameters.slackWebHook}}' # Use this from the form
+    channel_name: '' # Let the user select this
+    team_url: 'wmwx' # Setting the watsion media and weather as default.
+
+    # Learn about the below form object:
 #  https://github.com/open-toolchain/sdk/wiki/Template-Custom-UI#form
 form:
   pipeline:
@@ -91,6 +100,6 @@ form:
       prod-resource-group: '{{prodResourceGroup}}'
       prod-cluster-name: '{{prodClusterName}}'
       slack-web-hook: '{{slackWebHook}}'
-      git-token: '{{gitToken}}'
+      git-token: '{{gitToken}}' # Will be reused in the slack service
       snyk-token: '{{snykToken}}'
       helm-values-file : '{{helmValuesFile}}'
