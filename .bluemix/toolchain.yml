@@ -79,7 +79,7 @@ services:
   notification:
     service_id: 'slack'
     parameters:
-      api_token: '{{form.pipeline.parameters.slackWebHook}}' # Use this from the form
+      api_token: '{{form.pipeline.parameters.slack-web-hook}}' # Use this from the form
       channel_name: '' # Let the user select this
       team_url: 'wmwx' # Setting the watsion media and weather as default.
 
